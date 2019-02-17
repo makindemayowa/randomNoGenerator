@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import RandNos from "./RandNos";
 import { Row, Col } from "reactstrap";
-import {
-  generateNos,
-  sortAsc,
-  sortDesc,
-  getMaxNo,
-  getMinNo
-} from "./randomNumbers";
-import CustomModal from "./CustomModal";
-import "./App.css";
+import { generateNos, sortAsc, sortDesc, getMaxNo, getMinNo } from "../../api";
+import RandNos from "../components/RandNos";
+import CustomModal from "../components/CustomModal";
+import "./home.css";
 
 class App extends Component {
   state = {
