@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test:dev": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test": "jest --ci --coverage"
+    "test": "jest --ci --coverage",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "eslintConfig": {
     "extends": "react-app"

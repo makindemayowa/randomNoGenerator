@@ -1,4 +1,4 @@
-https://travis-ci.org/makindemayowa/randomNoGenerator.svg?branch=master
+[![Coverage Status](https://coveralls.io/repos/github/makindemayowa/randomNoGenerator/badge.svg?branch=master)](https://coveralls.io/github/makindemayowa/randomNoGenerator?branch=master)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
