@@ -13,7 +13,6 @@ class CustomModal extends React.Component {
   }
 
   toggle() {
-    console.log("I got called");
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
