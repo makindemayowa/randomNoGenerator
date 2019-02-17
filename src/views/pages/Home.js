@@ -7,7 +7,6 @@ import "./home.css";
 
 class App extends Component {
   state = {
-    quantity: 0,
     randNos: [],
     width: 0
   };
@@ -29,15 +28,18 @@ class App extends Component {
     });
   }
 
-  sortNumbers = dir => {
+  sortNumbers = async dir => {
     const { randNos } = this.state;
+    let newNos;
     if (dir === "asc") {
-      this.setState({
-        randNos: [...sortAsc(randNos)]
+      newNos = sortAsc([...randNos]);
+      return this.setState({
+        randNos: newNos
       });
     } else {
-      this.setState({
-        randNos: [...sortDesc(randNos)]
+      newNos = sortDesc([...randNos]);
+      await this.setState({
+        randNos: newNos
       });
     }
   };
@@ -84,6 +86,7 @@ class App extends Component {
               <Col md="3">
                 <CustomModal
                   buttonLabel="Get Max"
+                  className="maxNo"
                   onclick={this.getMaximumNo}
                   modalTitle="Maximun Number"
                   modalBody={`The maximum phone number is (0)${maxNo}`}
@@ -93,6 +96,7 @@ class App extends Component {
                 <CustomModal
                   buttonLabel="Get Min"
                   modalTitle="Minimum Number"
+                  className="minNo"
                   onclick={this.getMinimumNo}
                   modalBody={`The minimum phone number is (0)${minNo}`}
                 />
@@ -100,7 +104,7 @@ class App extends Component {
               <Col md="3">
                 <span className="dropdown">
                   <button
-                    className="btn btn-primary dropdown-toggle"
+                    className="btn btn-primary dropdown-toggle dropdownMenuButton"
                     type="button"
                     id="dropdownMenuButton"
                     data-toggle="dropdown"
@@ -115,13 +119,13 @@ class App extends Component {
                   >
                     <button
                       onClick={() => this.sortNumbers("asc")}
-                      className="dropdown-item"
+                      className="dropdown-item sortAsc"
                     >
                       ascending
                     </button>
                     <button
                       onClick={() => this.sortNumbers("desc")}
-                      className="dropdown-item"
+                      className="dropdown-item sortDesc"
                     >
                       descending
                     </button>

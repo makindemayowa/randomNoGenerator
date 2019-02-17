@@ -13,6 +13,7 @@ class CustomModal extends React.Component {
   }
 
   toggle() {
+    console.log("I got called");
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
@@ -24,12 +25,19 @@ class CustomModal extends React.Component {
         &times;
       </button>
     );
-    const { modalBody, modalTitle, buttonLabel, onclick } = this.props;
+    const {
+      modalBody,
+      modalTitle,
+      buttonLabel,
+      onclick,
+      className
+    } = this.props;
 
     return (
       <div>
         <Button
           color="primary"
+          className={className}
           onClick={() => {
             onclick();
             this.toggle();

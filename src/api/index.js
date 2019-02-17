@@ -10,7 +10,7 @@ const getUniqueNos = randNos => {
   return [...new Set(randNos)];
 };
 
-const concatRandNos = (arr1, arr2) => {
+export const concatRandNos = (arr1, arr2) => {
   return arr1.concat(arr2);
 };
 
