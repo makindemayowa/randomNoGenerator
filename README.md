@@ -2,7 +2,7 @@
 
 ### Welcome to Random number generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is used to generate random 10 digits phone numbers that starts with 0. The maximum numbers that can be generated right now is 10,000.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is used to generate random 10 digits phone numbers that starts with 0. The maximum numbers that can be generated right now is 10,000. The app is available at [https://makindemayowa.github.io/randomNoGenerator/](https://makindemayowa.github.io/randomNoGenerator/)
 
 ### Installation
 
