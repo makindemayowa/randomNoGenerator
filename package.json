@@ -21,10 +21,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:dev": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test:client": "jest --ci --coverage"
+    "test": "jest --ci --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
