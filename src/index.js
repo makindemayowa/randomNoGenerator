@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "react-virtualized/styles.css";
-import Routes from "./routes";
 import * as serviceWorker from "./serviceWorker";
+import Home from "../src/views/pages/Home";
 
-ReactDOM.render(<Routes />, document.getElementById("root"));
+ReactDOM.render(<Home />, document.getElementById("root"));
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
